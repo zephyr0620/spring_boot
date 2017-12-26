@@ -9,26 +9,22 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-
 @Controller
-@RequestMapping("/")
-public class MainController {
+@RequestMapping("/test")
+public class TestController {
 
-
-    @ResponseBody
-    @RequestMapping("/")
+    @RequestMapping("/hello")
     public ModelAndView home() {
 
         ModelAndView modelAndView = new ModelAndView();
-        Map<String, Object> model = new HashMap<String, Object>();
+        /*Map<String, Object> model = new HashMap<String, Object>();
         model.put("time", new Date());
         model.put("message", "圣诞节快乐！");
         model.put("toUserName", "刘女士");
         model.put("fromUserName", "老姚");
-        modelAndView.addAllObjects(model);
-        modelAndView.setViewName("welcome");
+        modelAndView.addAllObjects(model);*/
+        modelAndView.setViewName("test");
 
         return modelAndView;
     }
-
 }
