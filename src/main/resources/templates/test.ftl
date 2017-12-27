@@ -19,6 +19,8 @@
 <body>
 <h1>欢迎光临本站</h1>
 
+<img src="/img/profile.jpg" class="img-responsive" alt="响应式图像">
+
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
 <script src="https://code.jquery.com/jquery.js"></script>
 <!-- 包括所有已编译的插件 -->

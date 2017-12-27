@@ -1,7 +1,10 @@
 package com.zephyr.web;
 
+import com.zephyr.client.VO.RegisterVO;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -24,6 +27,26 @@ public class TestController {
         model.put("fromUserName", "老姚");
         modelAndView.addAllObjects(model);*/
         modelAndView.setViewName("test");
+
+        return modelAndView;
+    }
+
+    @RequestMapping("/form")
+    public ModelAndView form() {
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("form");
+
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/delForm",method = RequestMethod.POST)
+    public ModelAndView delform(@ModelAttribute RegisterVO registerVO) {
+
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("time", new Date());
+        modelAndView.addObject("user",registerVO);
+        modelAndView.setViewName("register_result");
 
         return modelAndView;
     }
