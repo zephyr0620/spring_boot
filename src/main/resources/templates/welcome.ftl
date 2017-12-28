@@ -9,7 +9,7 @@
 
 <p style="color:blue;">&emsp;${message}</p>
 
-祝：开心！
+祝：开心!
 </br>
 ${fromUserName}
 </br>
